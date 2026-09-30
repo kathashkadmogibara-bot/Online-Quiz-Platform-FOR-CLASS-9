@@ -1,185 +1,108 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f7f5;
-    color: #222;
-    min-height: 100vh;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #111827, #1e3a8a);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
 }
-
-
-/* =========================
-   MAIN CONTAINER
-========================= */
 
 .container {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 55px 20px;
-    text-align: center;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 h1 {
-    font-size: 36px;
-    letter-spacing: 3px;
-    color: #222;
-    margin-bottom: 8px;
+  font-size: 42px;
+  margin-bottom: 8px;
 }
 
 .subtitle {
-    font-size: 15px;
-    letter-spacing: 1.5px;
-    color: #68736d;
-    margin-bottom: 45px;
+  color: #d1d5db;
+  margin-bottom: 30px;
 }
 
-
-/* =========================
-   MENU
-========================= */
-
 .menu {
-    width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .menu h2 {
-    font-size: 28px;
-    letter-spacing: 2px;
-    color: #333;
-    margin-bottom: 30px;
+  margin-bottom: 22px;
+  font-size: 22px;
 }
 
-
-/* =========================
-   LINKS
-========================= */
-
+/* BUTTON LINK */
 .menu a {
-    display: block;
-    width: 85%;
-    max-width: 500px;
-    margin: 14px auto;
-    text-decoration: none;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  margin: 12px 0;
 }
 
+/* ALL SUBJECT BUTTONS */
+.menu a button {
+  display: block;
+  width: 100%;
 
-/* =========================
-   BUTTONS
-========================= */
+  padding: 16px 20px;
 
-.menu button {
-    width: 100%;
+  border: none;
+  border-radius: 12px;
 
-    padding: 18px 25px;
+  background: white;
+  color: #111827;
 
-    border: 1px solid #cfd8d3;
-    border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
 
-    background: white;
-    color: #252a27;
+  cursor: pointer;
 
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
+  transition: all 0.2s ease;
 
-    cursor: pointer;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-
-    transition:
-        background-color 0.15s ease,
-        color 0.15s ease,
-        border-color 0.15s ease,
-        box-shadow 0.15s ease,
-        transform 0.1s ease;
-
-    -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-
-/* =========================
-   HOVER
-========================= */
-
-.menu button:hover {
-    background: #eef8f1;
-    border-color: #9bc9a9;
-
-    transform: translateY(-3px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+/* HOVER */
+.menu a button:hover {
+  transform: translateY(-2px);
+  background: #dbeafe;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-/* =========================
-   TAP / CLICK
-========================= */
-
-.menu button:active {
-    background-color: rgb(0, 255, 100);
-
-    color: black;
-
-    border-color: rgb(0, 255, 100);
-
-    box-shadow: 0 0 18px rgba(0, 255, 100, 0.65);
-
-    transform: scale(0.98);
+/* CLICK */
+.menu a button:active {
+  transform: scale(0.98);
 }
 
+/* MOBILE */
+@media (max-width: 500px) {
 
-/* =========================
-   FOCUS
-========================= */
+  h1 {
+    font-size: 32px;
+  }
 
-.menu button:focus {
-    outline: none;
+  .menu {
+    padding: 18px;
+  }
+
+  .menu a button {
+    padding: 15px;
+    font-size: 15px;
+  }
 }
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    .container {
-        padding: 40px 15px;
-    }
-
-    h1 {
-        font-size: 29px;
-        letter-spacing: 2px;
-    }
-
-    .subtitle {
-        font-size: 13px;
-        margin-bottom: 35px;
-    }
-
-    .menu h2 {
-        font-size: 24px;
-        margin-bottom: 25px;
-    }
-
-    .menu a {
-        width: 95%;
-    }
-
-    .menu button {
-        padding: 17px 15px;
-        font-size: 14px;
-        border-radius: 12px;
-    }
-}
-
